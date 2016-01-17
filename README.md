@@ -14,6 +14,7 @@ It should look like this:
 ## Installation
 
 `gem install jekyll`
+
 `gem install jekyll-paginate`
 
 ## What's Included
