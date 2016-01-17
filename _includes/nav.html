@@ -15,14 +15,14 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="{{ site.baseurl }}/">Home</a>
-                </li>
-                {% for page in site.pages %}{% if page.title %}
-                <li>
-                    <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-                </li>
-                {% endif %}{% endfor %}
+                {% for link in site.data.navigation %}
+                    {% if link.url contains 'http' %}
+                        {% assign domain = '' %}
+                    {% else %}
+                        {% assign domain = site.url %}
+                    {% endif %}
+                    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+                {% endfor %}
             </ul>
         </div>
         <!-- /.navbar-collapse -->

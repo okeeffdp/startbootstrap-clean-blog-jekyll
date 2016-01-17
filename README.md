@@ -11,6 +11,11 @@ In the _config.yml file, the base URL is set to /startbootstrap-clean-blog-jekyl
 It should look like this:
 `baseurl: ""`
 
+## Installation
+
+`gem install jekyll`
+`gem install jekyll-paginate`
+
 ## What's Included
 
 A full Jekyll environment is included with this theme. If you have Jekyll installed, simply run `jekyll serve` in your command line and preview the build in your browser. You can use `jekyll serve --watch` to watch for changes in the source files as well.
